@@ -1,0 +1,18 @@
+Nao remova nada dessa merda, 'pasta' é randomizada e toda hora um hash aleatorio é gerado
+vai evitar ataques de injeção sql
+ataques de injeção manual
+ataques de injeção loadlibrary
+ataques de injeção standard
+ataques de injeção hijacking
+ataques de injeção manualmap
+ataques de injeção kernel
+
+pst: tamanho pode alterar...
+https://prnt.sc/p98qpt
+
+
+primeiramente altere as informações da conexão do banco dados que se encontra na pasta criptografada com sha1,sha2,caesar ('gdwdedvh')
+após atualizar os dados envie para seu gerenciador de arquivos que esta no seu CPANEL
+
+e teste a conexão com o banco de dados.
+pst: nao teste a conexao do banco de dados pelo seu desktop, nao vai dar certo... 
