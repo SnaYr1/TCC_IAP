@@ -91,3 +91,21 @@ input[type=password] {
       border-bottom: 1px solid #ff6000;
       box-shadow: 0 1px 0 0 #ff6000;
       }    
+
+      .active-orange-2 input[type=email]:focus:not([readonly]) {
+        border-bottom: 1px solid #ff6000;
+        box-shadow: 0 1px 0 0 #ff6000;
+        }
+        .active-orange input[type=email] {
+        border-bottom: 1px solid #ff6000;
+        box-shadow: 0 1px 0 0 #ff6000;
+        }  
+
+        .active-orange-2 input[type=password]:focus:not([readonly]) {
+          border-bottom: 1px solid #ff6000;
+          box-shadow: 0 1px 0 0 #ff6000;
+          }
+          .active-orange input[type=password] {
+          border-bottom: 1px solid #ff6000;
+          box-shadow: 0 1px 0 0 #ff6000;
+          }  

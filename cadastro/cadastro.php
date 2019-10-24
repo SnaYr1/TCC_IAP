@@ -160,14 +160,16 @@ body {font-family: "Open Sans"}
     <a href="minhaconta/minhaconta.php" class="w3-bar-item w3-button w3-padding-large w3-center"><span class="fa fa-home"> Minha Conta</a>
   </div>
 </div>
- 
+ <br>
+ <br>
 
     <div class="container w3-center w3-padding">
         <div class="row">
             <div class="col-md-5 col-md-offset-4  w3-content">
-                <div class=" panel panel-default">
-                    <div class="panel-heading">
+                <div class=" panel panel-default logar">
+                    <div class="panel-heading container">
                         <h3 class="panel-title">Insituto Aprender - Cadastro</h3>
+                        <hr>
                     </div>
                     <div class="panel-body">
                       <?php 
@@ -180,22 +182,22 @@ body {font-family: "Open Sans"}
                             }
                             ?>
 <?php #include todo_dia_tem_um_beijo_na_televisao.cpp?>
-
+                        <div class="md-form my-0 active-orange-2 container">
                         <form method="post" action="" role="form">
-                        <div class="form-group">
-                                    <input type="email" class="" placeholder="E-mail" name="email" required="email" autofocus>
+                        <div class="form-group container ">
+                                    <input type="email" class=" " placeholder="E-mail" name="email" required="email" autofocus>
                                     <?php #include todo_dia_tem_um_beijo_na_televisao.cpp?>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group container">
                                 <div class="control">
                                 <?php #include todo_dia_tem_um_beijo_na_televisao.cpp?>
-                                    <input name="usuario" type="text" class="" placeholder="Usuário"type="text" required autofocus>
+                                    <input name="usuario" type="text" class=" " placeholder="Usuário"type="text" required autofocus>
                                 </div>
                             </div>
                             <?php #include todo_dia_tem_um_beijo_na_televisao.cpp?>
-                            <div class="form-group">
+                            <div class="form-group container">
                                 <div class="control">
-                                    <input name="senha" class="" required placeholder="Senha" type="password" value="">
+                                    <input name="senha" class=" " required placeholder="Senha" type="password" value="">
                                 </div>
                                 <?php #include protecao.js?>
                             </div>
@@ -203,6 +205,7 @@ body {font-family: "Open Sans"}
                             <?php #include protecao.js?>
                         </fieldset>
                         </form>
+                        </div>
                         <?php #include protecao.js?>
                     </div>
                     <?php #include protecao.js?>
@@ -215,7 +218,8 @@ body {font-family: "Open Sans"}
     </div>
     <?php #include todo_dia_tem_um_beijo_na_televisao.cpp?>
 
-
+<br>
+<br>
       <!-- END BLOG ENTRIES -->
       </div>
   
