@@ -37,7 +37,7 @@
 <?php if(isset($_GET['acao'])){	$acao = $_GET['acao'];}else{$acao ='home';}?>    
     
       <ul class="mainnav">
-      <li <?php if($acao =="welcome" || ($acao =="home")){echo 'class="active"';}?>><a href="home.php"><i class="icon-dashboard"></i><span>Homepage</span> </a> </li>
+      <li <?php if($acao =="welcome" || ($acao =="home")){echo 'class="active"';}?>><a href="home.php"><i class="icon-dashboard"></i><span>Inicio</span> </a> </li>
 
         
         <?php if($nivelLogado ==1){?>
@@ -50,7 +50,7 @@
         
         <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i><span>Usuários</span> <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Visualizar</a></li>
+            <li><a href="home.php?acao=ver-usuarios">Visualizar</a></li>
             <li><a href="#">Cadastrar</a></li>
             <li><a href="#">Editar Perfil</a></li>
           </ul>
@@ -69,7 +69,7 @@
             <li><a href="#">Perfil</a></li>
           </ul>
         </li>
-        <li><a href="#"><i class="icon-globe"></i><span>Manut. Site</span> </a></li>
+        <li><a href="#"><i class="icon-globe"></i><span>Outros</span> </a></li>
         <li></li>
       </ul>
       <?php }?>

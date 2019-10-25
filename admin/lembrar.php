@@ -2,7 +2,7 @@
 <html lang="pt-br">  
  <head>
     <meta charset="utf-8">
-    <title>Recuperar senha - WVA System</title>
+    <title>Recuperar senha - Instituto Aprender</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -32,7 +32,7 @@
 			</a>
 			
 			<a class="brand" href="index.html">
-				Recuperar senha - WVA System				
+				Recuperar senha - Instituto Aprender				
 			</a>		
 			
 			<div class="nav-collapse">

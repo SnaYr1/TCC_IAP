@@ -41,19 +41,13 @@ if(isset($_SESSION['usuariowva']) && (isset($_SESSION['senhawva']))){
 				<span class="icon-bar"></span>
 			</a>
 			
-			<a class="brand" href="index.php">
+			<a class="brand" href="../">
 				Login - Instituto Aprender		
 			</a>		
 			
 			<div class="nav-collapse">
 				<ul class="nav pull-right">
-					
-					<li class="">						
-						<a href="lembrar.php" class="">
-							Esqueceu sua senha?
-						</a>
-						
-					</li>
+				
 					
 					<li class="">						
 						<a href="../" class="">
@@ -156,6 +150,13 @@ if(isset($_POST['logar'])){
 				</div> <!-- /password -->
 				
 			</div> <!-- /login-fields -->
+			<div class="">
+				<label>Esqueceu a senha ? <a href="lembrar.php">Clique aqui !</a>
+			</div>
+
+			<div class="">
+				<label>Não é cadastrado ainda ? <a href="cadastro.php">Cadastre-se !</a>
+			</div>
 			
 			<div class="login-actions">
 									

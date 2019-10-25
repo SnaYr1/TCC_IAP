@@ -24,6 +24,9 @@
 				
 				// edicao
 				if($acao=='editar-postagem'){include("pages/edt-postagem.php");}
+
+				//exibir usuarios
+				if($acao=='ver-usuarios'){include("pages/ver-usuarios.php");}
 			
 	}
 	else{
