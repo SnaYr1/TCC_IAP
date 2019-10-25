@@ -7,11 +7,11 @@ if(!isset($_SESSION))
 //Login de Usários
 if(isset($_POST[login])){
 //Vinculando conexao do banco de dados dentro do codigo
-  include('../conexao/conexao.php');
+  include('../conexao.php');
   //Exibindo um erro, caso haja um
   $erro = array();
   // Captação de dados
-    $senha = $_POST[password];
+    $senha = $_POST[senha];
     $_SESSION['email'] = $mysqli->escape_string($_POST['email']);
     // Validação de dados
     if(!filter_var($_SESSION['email'], FILTER_VALIDATE_EMAIL))
@@ -20,7 +20,7 @@ if(isset($_POST[login])){
         $erro[] = "Preencha sua <strong>senha</strong> corretamente.";
     if(count($erro) == 0){
 
-        $sql = "SELECT senha as senha, usuario_id as valor 
+        $sql = "SELECT senha as senha, id as valor 
         FROM usuario
         WHERE email = '$_SESSION[email]'";
         $que = $mysqli->query($sql) or die($mysqli->error);
@@ -36,7 +36,7 @@ if(isset($_POST[login])){
 //se nao ocorrer nenhum erro durante a autenticacoa
         if(count($erro) == 0){
             //faca o redirecionamento de sucesso
-            echo "<script>location.href='https://www.google.com.br';</script>";
+            echo "<script>location.href='../index.php';</script>";
             exit();
             unset($_SESSION['email']);
         }          
@@ -212,14 +212,14 @@ body {font-family: "Open Sans"}
    <br>
    
 <div class="container w3-center w3-padding">
-        <div class="row ">
+        <div class="row">
             <div class="col-md-4 col-md-offset-4 w3-content">
-                <div class=" w3-padding logar" style="">
+                <div class=" w3-padding logar" style=" border-top-left-radius: 10px; border-top-right-radius: 10px; opacity:80%;">
                     <div class="">
                         <h3 class="">Insituto Aprender - Login</h3>
                         <hr>
                     </div>
-                    <div class="">
+                    <div class="w3-center">
                         <?php 
                         if(isset($erro)) 
                             if(count($erro) > 0){ ?>
@@ -229,22 +229,24 @@ body {font-family: "Open Sans"}
                             <?php 
                             }
                             ?>
-                        <form method="post" action="" role="form">
-
-                                <div class="form-group">
-                                    <input value="<?php if(isset($_SESSION['email'])) echo $_SESSION['email']; ?>" class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" required placeholder="Senha" name="password" type="password" value="">
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck" name="remember" value="Remember Me">
-                                        <label class="custom-control-label" for="customCheck">Lembrar-me</label>
-                                </div>
-                                <?php #include pasta.cpp?>
-                                <input type="submit" name="login" value="ENTRAR">
-
-                        </form>
+                            <div class="md-form my-0 active-orange-2 container w3-center w3-content w3-padding">
+                                <form method="post" action="" role="form">
+                                        <div class="form-group container">
+                                            <input value="<?php if(isset($_SESSION['email'])) echo $_SESSION['email']; ?>" class="" placeholder="E-mail" name="email" type="email" autofocus>
+                                        </div>
+                                        <div class="form-group container">
+                                            <input class="" required placeholder="Senha" name="senha" type="password" value="">
+                                        </div>
+                                        <div class="form-group custom-control custom-checkbox container w3-padding">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck" name="remember" value="Remember Me">
+                                                <label class="custom-control-label" for="customCheck">Lembrar-me</label>
+                                        </div>
+                                        <?php #include pasta.cpp?>
+                                        <div class="w3-padding">
+                                            <input  type="submit" name="login" value="ENTRAR">
+                                        </div>
+                                </form>
+                            </div>
                         <br>
                     </div>
                 </div>

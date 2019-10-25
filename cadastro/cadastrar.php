@@ -24,6 +24,6 @@ if($conexao->query($sql) === TRUE) {
 
 $conexao->close();
 
-header('Location: saturalunaagnostotusdomi.na');
+header('Location: ../login/login.php');
 exit;
 ?>

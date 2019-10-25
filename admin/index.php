@@ -11,7 +11,7 @@ if(isset($_SESSION['usuariowva']) && (isset($_SESSION['senhawva']))){
   
 <head>
     <meta charset="utf-8">
-    <title>Login - WVA System</title>
+    <title>Login - Instituto Aprender </title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
@@ -42,7 +42,7 @@ if(isset($_SESSION['usuariowva']) && (isset($_SESSION['senhawva']))){
 			</a>
 			
 			<a class="brand" href="index.php">
-				Login - WVA System			
+				Login - Instituto Aprender		
 			</a>		
 			
 			<div class="nav-collapse">

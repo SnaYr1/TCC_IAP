@@ -1,7 +1,7 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
-                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="home.php">WVA System</a>
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="home.php">Instituto Aprender - Painel <?php if($nivelLogado == 0){echo "do Usuario";}else if($nivelLogado == 1){echo "Admistrativo";}?></a>
       <div class="nav-collapse">
         <ul class="nav pull-right">
           <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
@@ -37,7 +37,8 @@
 <?php if(isset($_GET['acao'])){	$acao = $_GET['acao'];}else{$acao ='home';}?>    
     
       <ul class="mainnav">
-        <li <?php if($acao =="welcome" || ($acao =="home")){echo 'class="active"';}?>><a href="home.php"><i class="icon-dashboard"></i><span>Homepage</span> </a> </li>
+      <li <?php if($acao =="welcome" || ($acao =="home")){echo 'class="active"';}?>><a href="home.php"><i class="icon-dashboard"></i><span>Homepage</span> </a> </li>
+
         
         <?php if($nivelLogado ==1){?>
         <li class="<?php if($acao =="ver-postagens" || ($acao =="cad-postagem")){echo "active";}?> dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-file"></i><span>Postagens</span> <b class="caret"></b></a>
@@ -46,7 +47,7 @@
             <li><a href="home.php?acao=cad-postagem">Cadastrar</a></li>
           </ul>
         </li>
-        <?php }?>
+        
         <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i><span>Usuários</span> <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="#">Visualizar</a></li>
@@ -57,6 +58,21 @@
         <li><a href="#"><i class="icon-globe"></i><span>Manut. Site</span> </a></li>
         <li></li>
       </ul>
+      <?php }?>
+       
+      <?php if($nivelLogado ==0){?>
+        
+        <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-gamepad"></i><span>Atividades</span> <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Lições</a></li>
+            <li><a href="#">Visualizar</a></li>
+            <li><a href="#">Perfil</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><i class="icon-globe"></i><span>Manut. Site</span> </a></li>
+        <li></li>
+      </ul>
+      <?php }?>
     </div>
     <!-- /container --> 
   </div>

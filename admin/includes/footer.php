@@ -1,8 +1,12 @@
-<div class="footer">
+<div id="bottom-footer" class="section ">
   <div class="footer-inner">
     <div class="container">
-      <div class="row">
-        <div class="span12"> &copy; 2015 <a href="#">WVA System - Bootstrap Responsive</a>. </div>
+      <div class="row ">
+      <div class="col-md-12 text-center">
+        <span class="copyright">
+                      Copyright <?php $today = date("Y");  echo "$today"; ?> Todos os direitos reservados | WVASystem - Bootstrap Responsive
+        </span>
+      </div>
         <!-- /span12 --> 
       </div>
       <!-- /row --> 

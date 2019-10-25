@@ -14,7 +14,7 @@
 						echo 
                '<div class="alert alert-info">
                       <button type="button" class="close" data-dismiss="alert">×</button>
-                      <strong>Olá, '.$nomeLogado.'!</strong> Seja Bem vindo ao <strong>WVA System</strong> !
+                      <strong>Olá, '.$nomeLogado.'!</strong> Seja Bem vindo ao <strong>Dashboard</strong> !
                </div>';
 					}
 				}
@@ -25,17 +25,8 @@
             <div class="span12">	      		
 	      		<div id="target-1" class="widget">	      			
 	      			<div class="widget-content">	      				
-			      		<h1>WVA System - Apresentação</h1>			      		
-			      		<p>O <strong>WVA System</strong> é um Sistema de Postagem desenvolvido pelo canal '<strong>Web Vídeo Aulas</strong>', cujo objetivo é gerenciar toda parte de postagens e
-                        algumas funções internas do próprio sistema.	<br>
-                        O Sistema foi desenvolvido na linguagem <strong>PHP</strong>, utilizando juntamente com a classe <strong>PDO</strong>. O banco de dados utilizado é o famoso <strong>MySQL</strong>.</p>
-                        
-                        <p>O desenvolvimento desse Sistema tem como objetivo, ensinar aos apaixonados por <strong>Web Design</strong>, ensinar uma maneira de desenvolver
-                        um sistema p/ gerenciamento de dados, seja ele para um site instituicional, portal de notícias, loja virtual, etc.</p>
-                        
-                        <p>Espero que todos tenha um ótimo aprendizado, que vocês usem os conceitos aprendidos nesse projeto p/ aplicações em outros.</p>
-                        <p><strong>Forte abraço, e até a próxima!</strong></p>
-                        
+			      		<h1><strong>Seja Bem vindo <?php echo $nomeLogado ?></strong> </h1>			      		
+			      		<p> 
 		      		</div> <!-- /widget-content -->
 	      		</div> <!-- /widget -->
       		</div><!-- span 12 -->

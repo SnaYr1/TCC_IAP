@@ -167,8 +167,8 @@ body {font-family: "Open Sans"}
         <div class="row">
             <div class="col-md-5 col-md-offset-4  w3-content">
                 <div class=" panel panel-default logar">
-                    <div class="panel-heading container">
-                        <h3 class="panel-title">Insituto Aprender - Cadastro</h3>
+                    <div class="panel-heading container w3-orange" style=" border-top-left-radius: 10px; border-top-right-radius: 10px; opacity:80%;">
+                        <h3 class="panel-title w3-padding">Insituto Aprender - Cadastro</h3>
                         <hr>
                     </div>
                     <div class="panel-body">
