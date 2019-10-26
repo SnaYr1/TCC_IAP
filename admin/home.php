@@ -16,17 +16,36 @@
 
 				if($acao=='welcome' || $acao=='home'){include("pages/inicio.php");}	
 				
-				// cadastro
+				// cadastro postagem
 				if($acao=='cad-postagem'){include("pages/cad-postagem.php");}	
 				
-				// exibicao
+				// exibir postagem
 				if($acao=='ver-postagens'){include("pages/ver-postagens.php");}
 				
-				// edicao
+				// editar postagem
 				if($acao=='editar-postagem'){include("pages/edt-postagem.php");}
+
+
+
+				//cadastrar usuarios
+				if($acao=='cad-usuarios'){include("pages/cad-usuarios.php");}
 
 				//exibir usuarios
 				if($acao=='ver-usuarios'){include("pages/ver-usuarios.php");}
+
+				//editar usuarios
+				if($acao=='editar-usuarios'){include("pages/edt-usuarios.php");}
+
+				
+
+				//cadastrar galeria
+				if($acao=='cad-galeria'){include("pages/cad-galeria.php");}
+
+				//exibir galeria
+				if($acao=='ver-galeria'){include("pages/ver-galeria.php");}
+
+				//editar galeria
+				if($acao=='editar-galeria'){include("pages/edt-galeria.php");}
 			
 	}
 	else{

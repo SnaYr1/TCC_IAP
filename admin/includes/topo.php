@@ -55,6 +55,13 @@
             <li><a href="#">Editar Perfil</a></li>
           </ul>
         </li>
+        <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-camera"></i><span>Galeria</span> <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="home.php?acao=ver-galeria">Visualizar</a></li>
+            <li><a href="home.php?acao=cad-galeria">Cadastrar</a></li>
+          </ul>
+        </li>
+
         <li><a href="#"><i class="icon-globe"></i><span>Manut. Site</span> </a></li>
         <li></li>
       </ul>
