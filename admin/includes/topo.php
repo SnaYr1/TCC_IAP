@@ -51,8 +51,8 @@
         <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i><span>Usuários</span> <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="home.php?acao=ver-usuarios">Visualizar</a></li>
-            <li><a href="#">Cadastrar</a></li>
-            <li><a href="#">Editar Perfil</a></li>
+            <li><a href="home.php?acao=cad-usuarios">Cadastrar</a></li>
+            <li><a href="home.php?acao=edt-usuarios">Editar Perfil</a></li>
           </ul>
         </li>
         <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-camera"></i><span>Galeria</span> <b class="caret"></b></a>

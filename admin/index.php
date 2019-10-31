@@ -110,7 +110,7 @@ if(isset($_POST['logar'])){
                       <strong>Logado com Sucesso!</strong> Redirecionando para o sistema.
                 </div>';
 				
-				header("Refresh: 3, home.php?acao=welcome");
+				header("Refresh: 1, home.php?acao=welcome");
 			}else{
 				echo '<div class="alert alert-danger">
                       <button type="button" class="close" data-dismiss="alert">×</button>

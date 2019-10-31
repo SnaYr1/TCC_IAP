@@ -13,12 +13,12 @@ jQuery(function($){
                 
                 <div class="widget-header">
 	      				<i class="icon-file"></i>
-	      				<h3>Cadastrar Imagem</h3>
+	      				<h3>Cadastrar Galeria</h3>
 	  				</div> <!-- /widget-header -->
                      			
 	      			<div class="widget-content">	      				
 			      		
-                        <?php
+    <?php
 	  	if(isset($_POST['cadastrar'])){
 			$titulo 		= trim(strip_tags($_POST['titulo']));
 			$data 			= trim(strip_tags($_POST['data']));
@@ -53,7 +53,7 @@ jQuery(function($){
 						Selecione uma imagem e tente novamente!
 					</div>';
 		}
-		else if($numFile >=50){
+		else if($numFile >=10){
 			echo '<div class="alert alert-danger">
 						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 						Você ultrapassou o limite de upload. Selecione apenas uma foto e tente novamente!
@@ -93,23 +93,18 @@ jQuery(function($){
 			if($contar>0){
 				echo '<div class="alert alert-success">
                       <button type="button" class="close" data-dismiss="alert">×</button>
-                      <strong>Sucesso!</strong> A imagem foi postada !
+                      <strong>Sucesso!</strong> O post foi cadastrado.
                 </div>';
 			}else{
 				echo '<div class="alert alert-danger">
                       <button type="button" class="close" data-dismiss="alert">×</button>
-                      <strong>Erro ao cadastrar!</strong> Não foi possível cadastrar a imagem.
+                      <strong>Erro ao cadastrar!</strong> Não foi possível cadastrar o post.
                 </div>';
 			}			
 		}catch(PDOException $e){
 			echo $e;
 		}	
-						
-						
-						
-						
-						
-							
+				
 					}else
 						$msg[] = "<b>$name :</b> Desculpe! Ocorreu um erro...";
 				
@@ -133,7 +128,7 @@ jQuery(function($){
 								
 										
 										<div class="control-group">											
-											<label class="control-label" for="username">Título da Imagem</label>
+											<label class="control-label" for="username">Título</label>
 											<div class="controls">
 												<input type="text" class="span6 disabled" id="titulo" value="" name="titulo">
 											</div> <!-- /controls -->				
@@ -165,12 +160,13 @@ jQuery(function($){
                                                 </select>
 											</div> <!-- /controls -->				
 										</div> <!-- /control-group -->
-                                        
-                        
+										
+										
+	
                         
                         				<div class="form-actions">
-											<input type="submit" name="cadastrar" class="btn btn-primary" value="Salvar">
-											<input type="reset" class="btn" value="Cancelar">
+											<input type="submit" name="cadastrar" class="btn btn-success" value="Cadastrar">
+											<input type="reset" class="btn btn-danger" value="Cancelar">
 										</div> <!-- /form-actions -->
                   				</form>
                         

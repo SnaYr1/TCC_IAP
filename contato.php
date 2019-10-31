@@ -189,7 +189,7 @@ body {font-family: "Open Sans"}
                             <div class="col-md-5">
                                 <div class="form-group">
                                     <label for="form_name"><h4>Nome</h4></label>
-                                    <input id="form_name" type="text" name="name" class="form-control" style="border:1px solid #ced4da;" placeholder="Informe seu nome" required="required">
+                                    <input id="form_name" type="text" name="nomeremetente" class="form-control" style="border:1px solid #ced4da;" placeholder="Informe seu nome" required="required">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             <!--fim-->
@@ -198,28 +198,52 @@ body {font-family: "Open Sans"}
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="form_lastname"><h4>Sobrenome</h4></label>
-                                    <input id="form_lastname" type="text" name="surname" class="form-control"  style="border:1px solid #ced4da;" placeholder="Informe seu sobrenome" required="required">
+                                    <input id="form_lastname" type="text" name="sobrenomeremetente" class="form-control"  style="border:1px solid #ced4da;" placeholder="Informe seu sobrenome" required="required">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                       <!--fim-->
                     </div>
+                    <div class="row">
+                          <!--inicio-->
+                              <div class="col-md-2">
+                                  <div class="form-group">
+                                      <label for="form_lastname"><h4>DDD</h4></label>
+                                      <input id="form_lastname" type="text" name="ddd" class="form-control" placeholder="DDD" style="border:1px solid #ced4da;" required="required" >
+                                      <div class="help-block with-errors"></div>
+                                  </div>
+                              </div>
+
+                      <!--inicio-->
+                        <div class="col-md-4">
+                                  <div class="form-group">
+                                      <label for="form_lastname"><h4>Telefone</h4></label>
+                                      <input id="form_lastname" type="text" name="telefone" class="form-control" placeholder="Informe seu telefone" style="border:1px solid #ced4da;" required="required" >
+                                      <div class="help-block with-errors"></div>
+                                  </div>
+                              </div>
+
                     <!--inicio-->
-                        <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <div class="form-group">
                                     <label for="form_email"><h4>Email</h4></label>
-                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Informe seu e-mail" required="required">
+                                    <input id="form_email" style="border:1px solid #ced4da;" type="email" name="emailremetente" class="form-control" placeholder="Informe seu e-mail" required="required">
                                 </div>
                             </div>                                                
                         <!--fim-->
                         </div>
                         <!--inicio-->
-                        <div class="row">
+                        <div class="row ">
+                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_message"><h4>Assunto</h4></label>
+                                    <input type="text" style="border:1px solid #ced4da;" id="form_message" name="assunto" class="form-control" placeholder="Assunto" rows="4" required="required">
+                                </div>
+                            </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="form_message"><h4>Mensagem</h4></label>
-                                    <textarea id="form_message" name="message" class="form-control" placeholder="Mensagem" rows="4" required="required"></textarea>
+                                    <textarea id="form_message" name="mensagem" class="form-control" placeholder="Mensagem" rows="4" required="required"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12">

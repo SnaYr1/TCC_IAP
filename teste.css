@@ -230,3 +230,12 @@ body{
   color:#fff;
 }
 
+
+.imagemm{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: -60px;
+    margin-right: -300px;
+}
+

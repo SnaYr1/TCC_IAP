@@ -68,7 +68,7 @@ body {font-family: "Open Sans"}
 <div class="noticias">
    <span >Noticias</span>  
 </div>
-  <a href="index.php" class="w3-bar-item w3-right"><span class="fa fa-home minhaconta"> Minha Conta</span></a>
+  <a href="admin/index.php" class="w3-bar-item w3-right"><span class="fa fa-home minhaconta"> Minha Conta</span></a>
   <a href="contato.php" class="w3-bar-item w3-right"> <span class="fa fa-mobile spanzinho"> Entre em contato</a></span>
   <a href="sobre.php" class="w3-bar-item w3-right w3-hide-medium"> <span class="fa fa-home spanzinho"> Sobre a Empresa</a></span>
   <a href="https://www.facebook.com/IAPMococa/" class="w3-bar-item w3-right"> <span class="fa fa-facebook spanzinho"></a></span>
@@ -179,14 +179,13 @@ body {font-family: "Open Sans"}
 </div>
 
       <!-- Grid -->
-      <div class="w3-row w3-padding">
+      <div class=" ">
         <!-- Blog entries -->
-        <div class="w3-col l8 s12 container">  
+        <div class="w3-center">  
           <!-- Blog entry -->
-          <div class="w3-container w3-white  w3-padding-large">
-      <div class="divcenter w3-container">
-        <ul class="boxposts">
-                  
+          <div class=" w3-white ">
+
+          <div class=" w3-padding">
             <?php
 
             if(empty($_GET['pg'])){}
@@ -195,7 +194,7 @@ body {font-family: "Open Sans"}
             if(!is_numeric($pg)){
 
             echo '<script language= "JavaScript">
-                    location.href="index.php";
+                    location.href="galeria.php";
               </script>';
             }
 
@@ -204,7 +203,7 @@ body {font-family: "Open Sans"}
 
             if(isset($pg)){ $pg = $_GET['pg'];}else{ $pg = 1;}
 
-            $quantidade = 3;
+            $quantidade = 10;
             $inicio = ($pg*$quantidade) - $quantidade;
 
 
@@ -214,32 +213,26 @@ body {font-family: "Open Sans"}
               $resultado->execute();
               $contar = $resultado->rowCount();
               
-              if($contar > 0 ){
+              
+              if ($contar >0){
                 while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){
             ?>        
-                    <li>      
-                      <div class="w3-row-padding">
-                        <div class="w3-third w3-container w3-margin-bottom w3-cell">       	
-                          <span class="thumb w3-container">
-                            <img src="upload/galeria/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="300" height="300">
-                          </span> 
-                        </div>
-                      </div>              
-                      </li> 
-                      <hr>  
+                  <span >
+                     <img class="w3-padding-small" src="upload/galeria/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="300" height="300">
+                  </span>
               <?php
               }//while
               }else{
-                echo '<li>Não existe imagem cadastradas no sistema</li>';
+                echo "Não há imagens cadastradas no sistema !";
               }
                     
-              }catch(PDOException $erro){ echo $erro;}
+            }catch(PDOException $erro){ echo $erro;}
               ?>           
-            </ul>
+            </div>
 
-            <!-- inicio botoes -->
+             <!-- inicio botoes -->
 
-            <style>
+             <style>
             /* paginacao */
 
             .paginas{width:100%;padding:10px 0;text-align:center;background:#fff;height:auto;margin:10px auto;}
@@ -272,7 +265,7 @@ body {font-family: "Open Sans"}
                 $paginas = ceil($totalRegistros/$quantidade);
                 if($pg > $paginas){
                   echo '<script language= "JavaScript">
-                    location.href="index.php";
+                    location.href="galeria.php";
                     </script>';}
                 $links = 5;	
                 
@@ -283,7 +276,7 @@ body {font-family: "Open Sans"}
 
             <div class="paginas">
 
-            <a href="index.php?pg=1">Primeira Página</a>
+            <a href="galeria.php?pg=1">Primeira Página</a>
               
               <?php
               if(isset($_GET['pg'])){
@@ -295,13 +288,13 @@ body {font-family: "Open Sans"}
                 else{ 
             ?>
               
-              <a href="index.php?pg=<?php echo $i;?>"  class="ativo<?php echo $i;?>"><?php echo $i;?></a>
+              <a href="galeria.php?pg=<?php echo $i;?>"  class="ativo<?php echo $i;?>"><?php echo $i;?></a>
               
                   
             <?php  }} ?>
               
               
-              <a href="index.php?pg=<?php echo $pg;?>" class="ativo<?php echo $i;?>"><?php echo $pg;?></a>
+              <a href="galeria.php?pg=<?php echo $pg;?>" class="ativo<?php echo $i;?>"><?php echo $pg;?></a>
               
 
             <?php
@@ -310,20 +303,21 @@ body {font-family: "Open Sans"}
               else{
             ?>
                 
-            <a href="index.php?pg=<?php echo $i;?>" class="ativo<?php echo $i;?>"><?php echo $i;?></a>		
+            <a href="galeria.php?pg=<?php echo $i;?>" class="ativo<?php echo $i;?>"><?php echo $i;?></a>		
               
             <?php
               }
             }
             ?>
 
-            <a href="index.php?pg=<?php echo $paginas;?>">Última página</a>		
+            <a href="galeria.php?pg=<?php echo $paginas;?>">Última página</a>		
 
             </div><!-- paginas -->
             <?php
               }
             ?>
-            <!-- fim botoes paginacao -->   
+            <!-- fim botoes paginacao -->            
+
 
             </div>
             </div>

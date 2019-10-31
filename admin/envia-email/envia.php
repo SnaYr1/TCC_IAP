@@ -1,5 +1,6 @@
 ﻿<?php  
 		$nome     = utf8_decode (strip_tags(trim($_POST['nomeremetente'])));
+		$sobrenome     = utf8_decode (strip_tags(trim($_POST['sobrenomeremetente'])));
 		$email    = utf8_decode (strip_tags(trim($_POST['emailremetente'])));
 		$ddd = utf8_decode (strip_tags(trim($_POST['ddd'])));
 		$telefone = utf8_decode (strip_tags(trim($_POST['telefone'])));
@@ -26,10 +27,11 @@
 			$Email->AddReplyTo($email, $nome);
 			$Email->AddAddress("contato@wesleydesign.com.br"); // para quem será enviada a mensagem
 			// informando no email, o assunto da mensagem
-			$Email->Subject = "(Contato do site - seudominio.com.br)";
+			$Email->Subject = "(Contato do site - iapneuro.com.br)";
 			// Define o texto da mensagem (aceita HTML)
 			$Email->Body .= "<br /><br />
 							 <strong>Nome:</strong> $nome<br /><br />
+							 <strong>Sobrenome:</strong> $sobrenome<br /><br />
 							 <strong>E-mail:</strong> $email<br /><br />
 							 <strong>Telefone:</strong> $ddd - $telefone<br /><br />
 							 <strong>Assunto:</strong> $assunto<br /><br />

@@ -44,12 +44,12 @@
 					if($contar>0){
 						echo '<div class="alert alert-success">
                       <button type="button" class="close" data-dismiss="alert">×</button>
-                      <strong>Sucesso!</strong> O post foi excluído.
+                      <strong>Sucesso!</strong> a imagem foi excluído.
                 </div>';
 					}else{
 						echo '<div class="alert alert-danger">
                       <button type="button" class="close" data-dismiss="alert">×</button>
-                      <strong>Erro!</strong> Não foi possível excluir o post.
+                      <strong>Erro!</strong> Não foi possível excluir a imagem.
                 </div>';	
 					}
 					
@@ -145,7 +145,7 @@ $contagem =$inicio + 1;
                     <td><?php echo $mostra->exibir;?></td>
                     <td class="td-actions"><a href="home.php?acao=editar-postagem&id=<?php echo $mostra->id;?>" class="btn btn-small btn-success"><i class="btn-icon-only icon-edit"> </i></a>
                     
-                    <a href="home.php?acao=ver-galeria&pg=<?php echo $pg;?>&delete=<?php echo $mostra->id;?>" class="btn btn-danger btn-small"  onClick="return confirm('Deseja realmente exluir o post?')"><i class="btn-icon-only icon-remove"> </i></a></td>
+                    <a href="home.php?acao=ver-galeria&pg=<?php echo $pg;?>&delete=<?php echo $mostra->id;?>" class="btn btn-danger btn-small"  onClick="return confirm('Deseja realmente exluir a imagem?')"><i class="btn-icon-only icon-remove"> </i></a></td>
                   </tr>
 <?php
 }				

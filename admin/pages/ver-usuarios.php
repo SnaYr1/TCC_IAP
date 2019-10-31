@@ -144,16 +144,16 @@ $contagem =$inicio + 1;
                     <td> <?php echo $mostra->usuario;?> </td>
                     <td> <?php echo $mostra->dataCadastro;?> </td>
                     <td><?php echo $mostra->nivel;?></td>
-                    <td class="td-actions"><a href="home.php?acao=editar-usuario&id=<?php echo $mostra->id;?>" class="btn btn-small btn-success"><i class="btn-icon-only icon-edit"> </i></a>
+                    <td class="td-actions"><a href="home.php?acao=edt-usuarios&id=<?php echo $mostra->id;?>" class="btn btn-small btn-success"><i class="btn-icon-only icon-edit"> </i></a>
                     
-                    <a href="home.php?acao=ver-usuarios&pg=<?php echo $pg;?>&delete=<?php echo $mostra->id;?>" class="btn btn-danger btn-small"  onClick="return confirm('Deseja realmente exluir o post?')"><i class="btn-icon-only icon-remove"> </i></a></td>
+                    <a href="home.php?acao=ver-usuarios&pg=<?php echo $pg;?>&delete=<?php echo $mostra->id;?>" class="btn btn-danger btn-small"  onClick="return confirm('Deseja realmente exluir o usuário?')"><i class="btn-icon-only icon-remove"> </i></a></td>
                   </tr>
 <?php
 }				
 			}else{
 				echo '<div class="alert alert-danger">
                       <button type="button" class="close" data-dismiss="alert">×</button>
-                      <strong>Aviso!</strong> Não há post cadastrado em nosso banco de dados ou a página não existe.
+                      <strong>Aviso!</strong> Não há usuários cadastrado em nosso banco de dados ou a página não existe.
                 </div>';
 			}
 			
