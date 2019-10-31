@@ -153,10 +153,6 @@ if(isset($_POST['logar'])){
 			<div class="">
 				<label>Esqueceu a senha ? <a href="lembrar.php">Clique aqui !</a>
 			</div>
-
-			<div class="">
-				<label>Não é cadastrado ainda ? <a href="cadastro.php">Cadastre-se !</a>
-			</div>
 			
 			<div class="login-actions">
 									

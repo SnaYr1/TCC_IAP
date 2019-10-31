@@ -143,8 +143,9 @@ $contagem =$inicio + 1;
                     <td> <?php echo $mostra->dataNasc;?> </td>
                     <td> <?php echo $mostra->usuario;?> </td>
                     <td> <?php echo $mostra->dataCadastro;?> </td>
-                    <td><?php echo $mostra->nivel;?></td>
-                    <td class="td-actions"><a href="home.php?acao=edt-usuarios&id=<?php echo $mostra->id;?>" class="btn btn-small btn-success"><i class="btn-icon-only icon-edit"> </i></a>
+					<td><?php echo $mostra->nivel;?></td>
+					<td class="td-actions"><a href="home.php?acao=atividades&id=<?php echo $mostra->id;?>" class="btn btn-small btn-info"><i class="btn-icon-only icon-gamepad"> </i></a>
+                    <a href="home.php?acao=edt-usuarios&id=<?php echo $mostra->id;?>" class="btn btn-small btn-success"><i class="btn-icon-only icon-edit"> </i></a>
                     
                     <a href="home.php?acao=ver-usuarios&pg=<?php echo $pg;?>&delete=<?php echo $mostra->id;?>" class="btn btn-danger btn-small"  onClick="return confirm('Deseja realmente exluir o usuário?')"><i class="btn-icon-only icon-remove"> </i></a></td>
                   </tr>

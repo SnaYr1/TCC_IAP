@@ -250,8 +250,6 @@ textarea {
 
 .main {
 	padding-bottom: 2em;
-	
-	border-bottom: 1px solid #000;
 }
 
 
@@ -262,7 +260,7 @@ textarea {
 
 .extra {
 
-	border-top: 1px solid #585858;
+	border-top: 1px solid #585858
 	border-bottom: 1px solid #000;
 
 }

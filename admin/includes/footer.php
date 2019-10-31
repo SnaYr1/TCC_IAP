@@ -1,4 +1,4 @@
-<div id="bottom-footer" class="section ">
+<div id="bottom-footer " class="section navbar-fixed-bottom">
   <div class="footer-inner">
     <div class="container">
       <div class="row ">
