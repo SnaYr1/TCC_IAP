@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 30-Out-2019 às 23:32
--- Versão do servidor: 5.7.21
--- PHP Version: 5.6.35
+-- Generation Time: 31-Out-2019 às 19:54
+-- Versão do servidor: 5.7.24
+-- versão do PHP: 7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -23,6 +23,22 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `iapneu77_bd_iap` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `iapneu77_bd_iap`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `atividades`
+--
+
+DROP TABLE IF EXISTS `atividades`;
+CREATE TABLE IF NOT EXISTS `atividades` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(255) NOT NULL,
+  `descricao` varchar(255) NOT NULL,
+  `categoria` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 

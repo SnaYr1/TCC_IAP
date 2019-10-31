@@ -20,9 +20,18 @@
             </ul>
           </li>
         </ul>
+
+        <?php if($nivelLogado==1){?>
         <form action="home.php?acao=ver-postagens" method="post" enctype="multipart/form-data" class="navbar-search pull-right">
           <input type="text" class="search-query" name="palavra-busca" placeholder="pesquisar">
         </form>
+        <?php }?>
+
+        <?php if($nivelLogado==0){?>
+        <form action="home.php?acao=ver-atividades" method="post" enctype="multipart/form-data" class="navbar-search pull-right">
+          <input type="text" class="search-query" name="palavra-busca" placeholder="pesquisar">
+        </form>
+        <?php }?>
       </div>
       <!--/.nav-collapse --> 
     </div>

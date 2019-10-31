@@ -46,6 +46,9 @@
 
 				//editar galeria
 				if($acao=='editar-galeria'){include("pages/edt-galeria.php");}
+
+				//atividades
+				if($acao=='atividades'){include('pages/atividades.php');}
 			
 	}
 	else{
