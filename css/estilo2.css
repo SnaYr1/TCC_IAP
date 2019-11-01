@@ -3,6 +3,7 @@ body{background:url(../imagens/bg-body.jpg);}
 
 .divcenter{width:800px;height:auto;overflow:hidden;margin:0 auto;}
 .boxposts li{
+	display: flex;
 	width:758px;
 	height:auto;
 	padding:20px;

@@ -175,7 +175,7 @@
 		<div class="divcenter">
 			
 			
-			<ul class="boxposts" id="pgPost">
+			<ul class="w3-center" id="pgPost">
 				
 	<?php
 	if(isset($_GET['id'])){

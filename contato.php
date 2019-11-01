@@ -181,7 +181,7 @@ body {font-family: "Open Sans"}
         <div class="row">
             <div class="col-xl-8 offset-xl-2 py-5">
                 <!--ao clicar em enviar mensagem o usuario sera redirecionado para esta pagina-->
-                <form id="contact-form" method="post" action="enviar.php" role="form">
+                <form id="contact-form" method="post" action="admin/enviaemail/envia.php" role="form">
                     <div class="messages"></div>
                     <div class="controls">
                        <!--inicio-->

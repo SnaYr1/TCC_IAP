@@ -13,19 +13,19 @@
 			$Email->SetLanguage("br");
 			$Email->IsSMTP(); // Habilita o SMTP 
 			$Email->SMTPAuth = true; //Ativa e-mail autenticado
-			$Email->Host = 'seuservidordeenvio'; // Servidor de envio # verificar qual o host correto com a hospedagem as vezes fica como smtp.
-			$Email->Port = 'portapadrao587'; // Porta de envio
-			$Email->Username = 'emailautentica@com.br'; //e-mail que será autenticado
-			$Email->Password = 'senhadoemail'; // senha do email
+			$Email->Host = 'br596.hostgator.com.br'; // Servidor de envio # verificar qual o host correto com a hospedagem as vezes fica como smtp.
+			$Email->Port = '465w'; // Porta de envio
+			$Email->Username = 'iapneuroeducacao@gmail.com'; //e-mail que será autenticado
+			$Email->Password = 'zYDbu755e0'; // senha do email
 			// ativa o envio de e-mails em HTML, se false, desativa.
 			$Email->IsHTML(true); 
 			// email do remetente da mensagem
-			$Email->From = 'contato@wesleydesign.com.br';
+			$Email->From = 'lcsaraujo@Outlook.com.br';
 			// nome do remetente do email
 			$Email->FromName = utf8_decode($email);
 			// Endereço de destino do emaail, ou seja, pra onde você quer que a mensagem do formulário vá?
 			$Email->AddReplyTo($email, $nome);
-			$Email->AddAddress("contato@wesleydesign.com.br"); // para quem será enviada a mensagem
+			$Email->AddAddress("lcsaraujo@Outlook.com.br"); // para quem será enviada a mensagem
 			// informando no email, o assunto da mensagem
 			$Email->Subject = "(Contato do site - iapneuro.com.br)";
 			// Define o texto da mensagem (aceita HTML)

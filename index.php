@@ -148,7 +148,7 @@
         <br> 
         <a href="sobre.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Sobre a empresa</a>
         <br> 
-        <a href="minhaconta/minhaconta.php" class="w3-bar-item w3-button w3-padding-large w3-center"><span class="fa fa-home"> Minha Conta</a>
+        <a href="admin/index.php" class="w3-bar-item w3-button w3-padding-large w3-center"><span class="fa fa-home"> Minha Conta</a>
       </div>
 
         <!-- Navbar em telas medias(tablets)-->
@@ -167,7 +167,7 @@
         <br> 
         <a href="sobre.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Sobre a empresa</a>
         <br> 
-        <a href="minhaconta/minhaconta.php" class="w3-bar-item w3-button w3-padding-large w3-center"><span class="fa fa-home"> Minha Conta</a>
+        <a href="admin/index.php" class="w3-bar-item w3-button w3-padding-large w3-center"><span class="fa fa-home"> Minha Conta</a>
       </div>
     </div>
       <!-- Carousel Slide -->
@@ -237,13 +237,13 @@
     <hr>
 
       <!-- Grid -->
-      <div class="w3-row w3-padding">
+      <div class="w3-row w3-padding w3-display-container">
         <!-- Blog entries -->
         <div class="w3-col l8 s12 container">  
           <!-- Blog entry -->
           <div class="w3-container w3-white  w3-padding-large">
       <div class="divcenter w3-container">
-        <ul class="boxposts">
+        <ul class="">
                   
             <?php
 
@@ -277,8 +277,9 @@
             ?>        
                     <li>            	
                           <span class="thumb w3-container">
-                            <img src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="800" height="500">
-                
+                            <div class="w3-center w3-display-container w3-wide">
+                              <img class="" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="800" height="500">
+                            </div>
                           </span> 
                             
                           <span class="content w3-container w3-padding">
