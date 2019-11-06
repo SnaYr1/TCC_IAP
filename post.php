@@ -132,7 +132,7 @@
 			</div>
 	</div>
 	<div class="w3-top">
-		<!-- Navbar em telas pequenas(mobile) -->
+		<!-- Navbar em telas pequenas(celular) -->
 		<div id="demo01" class="w3-sidebar w3-light-grey w3-hide w3-hide-large w3-hide-medium ">
 			<a href="#" class="w3-bar-item w3-button w3-padding-large w3-center"onclick="myFunction('demo01')"><i class="fa fa-close"></i> Close</a> 
 			<br>   
@@ -171,11 +171,10 @@
 		</div>
 	</div>
 	
-		
-		<div class="divcenter">
+		<div class="w3-padding-large ">
 			
 			
-			<ul class="w3-center" id="pgPost">
+			<ul class="" id="pgPost">
 				
 	<?php
 	if(isset($_GET['id'])){
@@ -191,9 +190,9 @@
 		if($contar > 0 ){
 			while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){
 	?>        
-					<li>            	
-								<span class="thumb">
-									<img src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="166" height="166">
+					<li class=" w3-col l8 s12">            	
+								<span class="thumb w3-center">
+									<img class="w3-image" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="800" height="600">
 								</span>                
 								<span class="content">
 									<h1><?php echo $exibe->titulo;?></h1>
@@ -333,7 +332,18 @@
 			</footer>
 			<!-- /FOOTER -->
 
-
+			<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 
 	</body>
 	</html>
