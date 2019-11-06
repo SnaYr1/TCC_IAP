@@ -1,7 +1,4 @@
     <?php 
-    date_default_timezone_set('America/Sao_Paulo');
-    require_once 'system/config.php';
-    require_once 'system/database.php';
     include 'conexao.php';
     require_once ("admin/conexao/conecta.php");
     require ("admin/functions/limita-texto.php");
@@ -239,10 +236,10 @@
       <!-- Grid -->
       <div class="w3-row w3-padding w3-display-container">
         <!-- Blog entries -->
-        <div class="w3-col l8 s12 container">  
+        <div class="w3-col l8 s12 ">  
           <!-- Blog entry -->
-          <div class="w3-container w3-white  w3-padding-large">
-      <div class="divcenter w3-container">
+          <div class=" w3-content">
+      <div class="">
         <ul class="">
                   
             <?php
@@ -276,22 +273,25 @@
                 while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){
             ?>        
                     <li>            	
-                          <span class="thumb w3-container">
-                            <div class="w3-center w3-display-container w3-wide">
-                              <img class="" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="800" height="500">
+                          <span class="thumb">
+                            <div class="w3-center">
+                              <img class="w3-image" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="1000" height="800">
                             </div>
                           </span> 
                             
-                          <span class="content w3-container w3-padding">
+                          <span class="content">
                             <h1><?php echo $exibe->titulo;?></h1>
                               <p><?php echo limitarTexto($exibe->descricao, $limite=450)?></p> 
                               <div class="footer_post">
                                 <a href="post.php?id=<?php echo $exibe->id;?>">Leia o artigo completo</a>
                                 <span class="datapost">Data de Publicação: <strong><?php echo $exibe->data;?></strong></span>  
-                              </div><!-- footer post -->   
-                          </span>           
+                              </div><!-- footer post -->  
+                              <hr> 
+                              <br>
+                          </span>     
                       </li> 
-                      <hr>  
+                    
+                    
               <?php
               }//while
               }else{

@@ -14,7 +14,7 @@
 			$Email->IsSMTP(); // Habilita o SMTP 
 			$Email->SMTPAuth = true; //Ativa e-mail autenticado
 			$Email->Host = 'br596.hostgator.com.br'; // Servidor de envio # verificar qual o host correto com a hospedagem as vezes fica como smtp.
-			$Email->Port = '465w'; // Porta de envio
+			$Email->Port = '465'; // Porta de envio
 			$Email->Username = 'iapneuroeducacao@gmail.com'; //e-mail que será autenticado
 			$Email->Password = 'zYDbu755e0'; // senha do email
 			// ativa o envio de e-mails em HTML, se false, desativa.
