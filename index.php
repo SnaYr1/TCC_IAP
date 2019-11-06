@@ -110,7 +110,7 @@
     <!-- Navbar -->
       <div class="teste">
         <div class="w3-bar w3-white container">
-        <a class="w3-bar-item  w3-padding-large w3-hide-medium w3-hide-large w3-right " href="javascript:void(0)" onclick="myFunction('demo01')" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a class="w3-bar-item  w3-padding-large w3-hide-medium w3-hide-large w3-right " href="javascript:void(0)" onclick="myFunction('demo1')"  title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
         <a class="w3-bar-item  w3-padding-large w3-hide-small w3-hide-large w3-right " href="javascript:void(0)" onclick="myFunction('demo02')" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="index.php" class="w3-bar-item  w3-padding-large w3-hide-medium w3-hide-small">Inicio</a>
             <a href="noticias.php" class="w3-bar-item  w3-padding-large w3-hide-medium w3-hide-small">Noticias</a>
@@ -130,8 +130,8 @@
     </div>
     <div class="w3-top">
       <!-- Navbar em telas pequenas(mobile) -->
-      <div id="demo01" class="w3-sidebar w3-light-grey w3-hide w3-hide-large w3-hide-medium ">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-center"onclick="myFunction('demo01')"><i class="fa fa-close"></i> Close</a> 
+      <div id="demo1" class="w3-sidebar w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-bar-block w3-white w3-animate-left">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-center"onclick="myFunction('close')"><i class="fa fa-close"></i> Close</a> 
         <br>   
         <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Inicio</a>
         <br> 
@@ -147,9 +147,10 @@
         <br> 
         <a href="admin/index.php" class="w3-bar-item w3-button w3-padding-large w3-center"><span class="fa fa-home"> Minha Conta</a>
       </div>
+      
 
         <!-- Navbar em telas medias(tablets)-->
-        <div id="demo02" class="w3-sidebar w3-light-grey w3-hide w3-hide-small w3-hide-large ">
+        <div id="demo02" class="w3-sidebar w3-light-grey w3-hide w3-hide-small w3-hide-large w3-bar-block w3-white w3-animate-left">
         <a href="#" class="w3-bar-item w3-button w3-padding-large w3-center"onclick="myFunction('demo02')"><i class="fa fa-close"></i> Close</a> 
         <br>   
         <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Inicio</a>
@@ -167,6 +168,7 @@
         <a href="admin/index.php" class="w3-bar-item w3-button w3-padding-large w3-center"><span class="fa fa-home"> Minha Conta</a>
       </div>
     </div>
+    
       <!-- Carousel Slide -->
       <div id="demo" class="carousel slide" data-ride="carousel">
         <header class="w3-display-container w3-wide">
@@ -223,7 +225,7 @@
 
             <!-- Controles direito e esquerdo-->
             <a class="carousel-control-prev control-carousel-arrows" href="#demo" data-slide="prev">
-              <span class=""><i class="fas fa-caret-left control-carousel-arrows"></i></span>
+              <span class="fas fa-caret-left control-carousel-arrows"></span>
             </a>
 
             <a class="carousel-control-next control-carousel-arrows" href="#demo" data-slide="next">
@@ -575,7 +577,7 @@
         <!-- /FOOTER -->
 
         <script>
-// Toggle between hiding and showing blog replies/comments
+
 document.getElementById("myBtn").click();
 function myFunction(id) {
   var x = document.getElementById(id);
@@ -585,6 +587,16 @@ function myFunction(id) {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+
+function openside() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeside() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
 </script>
 
     </body>
