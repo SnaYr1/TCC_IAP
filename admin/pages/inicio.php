@@ -122,8 +122,7 @@ $contagem =1;
                     <td> <?php echo $mostra->data;?> </td>
                     <td> <?php echo limitarTexto($mostra->descricao, $limite=200)?> </td>
                     <td class="td-actions"><a href="home.php?acao=editar-postagem&id=<?php echo $mostra->id;?>" class="btn btn-small btn-success"><i class="btn-icon-only icon-edit"> </i></a>
-                    
-                    <a href="home.php?delete=<?php echo $mostra->id;?>" class="btn btn-danger btn-small" onClick="return confirm('Deseja realmente exluir o post?')"><i class="btn-icon-only icon-remove"> </i></a></td>
+                    <a href="home.php?delete=<?php echo $mostra->id;?>" class="btn btn-danger btn-small" onClick="return confirm('Deseja realmente excluir o post?')"><i class="btn-icon-only icon-remove"> </i></a></td>
                   </tr>
 <?php
 }				

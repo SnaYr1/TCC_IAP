@@ -216,20 +216,15 @@ body {font-family: "Open Sans"}
               
               if ($contar >0){
                 while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){
-            ?>        
-            <tr>
-                <td>
+            ?>    
+              <div class="postnotic w3-card w3-margin-right" style="width:320px;">
                   <span >
-                     <img class="w3-padding-small" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="300" height="300">
-                     <h5><?php echo $exibe->titulo;?></h5>
-                      <p><?php echo limitarTexto($exibe->descricao, $limite=150)?></p> 
+                     <a href="post.php?id=<?php echo $exibe->id; ?>" ><img class="w3-padding-small w3-card-3" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>"  title="<?php echo $exibe->titulo;?>" width="300" height="300">
+                     <h5><?php echo limitarTexto($exibe->titulo, $limite=50);?></h5>
+                      <p><?php echo limitarTexto($exibe->descricao, $limite=120)?></p> </a>
                     <br>
-                    </span>
-                </td>  
-                <td>
-
-                </td>
-            </tr>
+                  </span>
+              </div>  
               <?php
               }//while
               }else{

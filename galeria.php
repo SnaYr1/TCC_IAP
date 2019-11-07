@@ -216,10 +216,60 @@ body {font-family: "Open Sans"}
               
               if ($contar >0){
                 while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){
-            ?>        
-                  <span >
-                     <img class="w3-padding-small" src="upload/galeria/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="300" height="300">
-                  </span>
+            ?>      
+
+
+
+
+              <!-- Button to Open the Modal -->
+<img src="upload/galeria/<?php echo $exibe->imagem;?>" class="w3-padding-small" data-toggle="modal" data-target="#myModal" width="300" height="300">
+  
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+
+      <!-- Modal body -->
+      <div class="modal-body">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="upload/galeria/<?php echo $exibe->imagem?>" alt="<?php echo $exibe->titulo;?>" style="width:100%;">
+            </div>
+            <div class="carousel-item">
+              <img src="upload/galeria/<?php echo $exibe->imagem?>" alt="<?php echo $exibe->titulo;?>" style="width:100%;">
+            </div>
+            <div class="carousel-item ">
+              <img src="upload/galeria/<?php echo $exibe->imagem?>" alt="<?php echo $exibe->titulo;?>" style="width:100%;">
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
               <?php
               }//while
               }else{

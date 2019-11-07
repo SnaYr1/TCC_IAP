@@ -195,8 +195,8 @@
 			while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){
 ?>        
         	<li>            	
-                <span class="thumb">
-                	<img src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" style="max-width:600px;" height="166">
+                <span class="thumb w3-center">
+                	<img src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="600" height="600">
                 </span>                
                 <span class="content">
                 	<h1><?php echo $exibe->titulo;?></h1>
