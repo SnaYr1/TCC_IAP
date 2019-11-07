@@ -68,7 +68,7 @@ body {font-family: "Open Sans"}
 <div class="noticias">
    <span >Noticias</span>  
 </div>
-  <a href="index.php" class="w3-bar-item w3-right"><span class="fa fa-home minhaconta"> Minha Conta</span></a>
+  <a href="admin/index.php" class="w3-bar-item w3-right"><span class="fa fa-home minhaconta"> Minha Conta</span></a>
   <a href="contato.php" class="w3-bar-item w3-right"> <span class="fa fa-mobile spanzinho"> Entre em contato</a></span>
   <a href="sobre.php" class="w3-bar-item w3-right w3-hide-medium"> <span class="fa fa-home spanzinho"> Sobre a Empresa</a></span>
   <a href="https://www.facebook.com/IAPMococa/" class="w3-bar-item w3-right"> <span class="fa fa-facebook spanzinho"></a></span>
@@ -144,7 +144,7 @@ body {font-family: "Open Sans"}
     <br> 
     <a href="galeria.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Galeria</a>
     <br>
-    <a href="contatos.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Contatos</a>
+    <a href="contato.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Contatos</a>
     <br> 
     <a href="sobre.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Sobre a empresa</a>
     <br> 
@@ -163,7 +163,7 @@ body {font-family: "Open Sans"}
     <br> 
     <a href="galeria.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Galeria</a>
     <br>
-    <a href="contatos.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Contatos</a>
+    <a href="contato.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Contatos</a>
     <br> 
     <a href="sobre.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Sobre a empresa</a>
     <br> 
@@ -172,14 +172,166 @@ body {font-family: "Open Sans"}
 </div>
  
    
+
 <div class="w3-container w3-center ">
-  <h1>Notícias</h1>
+  <h1>Noticias</h1>
   <hr>
 </div>
-  
 
-  </div>
-      
+      <!-- Grid -->
+      <div class=" ">
+        <!-- Blog entries -->
+        <div class="w3-center">  
+          <!-- Blog entry -->
+          <div class=" w3-white ">
+
+          <div class="col-12 w3-padding">
+            <?php
+
+            if(empty($_GET['pg'])){}
+            else{ 
+            $pg =$_GET['pg'];
+            if(!is_numeric($pg)){
+
+            echo '<script language= "JavaScript">
+                    location.href="noticias.php";
+              </script>';
+            }
+
+            }
+
+
+            if(isset($pg)){ $pg = $_GET['pg'];}else{ $pg = 1;}
+
+            $quantidade = 10;
+            $inicio = ($pg*$quantidade) - $quantidade;
+
+
+            $sql = "SELECT * from tb_postagens WHERE exibir='Sim' ORDER BY id DESC LIMIT $inicio, $quantidade";
+            try{
+              $resultado = $conexao->prepare($sql);
+              $resultado->execute();
+              $contar = $resultado->rowCount();
+              
+              
+              if ($contar >0){
+                while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){
+            ?>        
+            <tr>
+                <td>
+                  <span >
+                     <img class="w3-padding-small" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="300" height="300">
+                     <h5><?php echo $exibe->titulo;?></h5>
+                      <p><?php echo limitarTexto($exibe->descricao, $limite=150)?></p> 
+                    <br>
+                    </span>
+                </td>  
+                <td>
+
+                </td>
+            </tr>
+              <?php
+              }//while
+              }else{
+                echo "Não há postagens cadastradas no sistema !";
+              }
+                    
+            }catch(PDOException $erro){ echo $erro;}
+              ?>           
+            </div>
+
+             <!-- inicio botoes -->
+
+             <style>
+            /* paginacao */
+
+            .paginas{width:100%;padding:10px 0;text-align:center;background:#fff;height:auto;margin:10px auto;}
+            .paginas a{width:auto;padding:4px 10px;background:#eee;color:#333;margin:0px 2.5px;text-decoration:none;font-family:tahoma, "Trebuchet Ms", arial;font-size:13px; }
+            .paginas a:hover{text-decoration:none;background:#00BA8B; color:#fff;}
+
+            <?php
+            if(isset($_GET['pg'])){
+              $num_pg = $_GET['pg'];	
+            }else{$num_pg = 1;}
+            ?>
+
+            .paginas a.ativo<?php echo $num_pg;?>{background:#00BA8B; color:#fff;}
+
+            </style>
+
+
+            <?php
+            $sql = "SELECT * from tb_postagens";
+            try{
+                $result = $conexao->prepare($sql);			
+                $result->execute();
+                $totalRegistros = $result->rowCount();
+              }catch(PDOException $e){
+                echo $e;
+              }
+              
+              if($totalRegistros <=$quantidade){}
+              else{
+                $paginas = ceil($totalRegistros/$quantidade);
+                if($pg > $paginas){
+                  echo '<script language= "JavaScript">
+                    location.href="noticias.php";
+                    </script>';}
+                $links = 5;	
+                
+                if(isset($i)){}
+                else{$i = '1';}
+
+            ?>
+
+            <div class="paginas">
+
+            <a href="noticias.php?pg=1">Primeira Página</a>
+              
+              <?php
+              if(isset($_GET['pg'])){
+                $num_pg = $_GET['pg'];	
+              }
+              
+              for($i = $pg-$links; $i <= $pg-1; $i++){
+                if($i<=0){}
+                else{ 
+            ?>
+              
+              <a href="noticias.php?pg=<?php echo $i;?>"  class="ativo<?php echo $i;?>"><?php echo $i;?></a>
+              
+                  
+            <?php  }} ?>
+              
+              
+              <a href="noticias.php?pg=<?php echo $pg;?>" class="ativo<?php echo $i;?>"><?php echo $pg;?></a>
+              
+
+            <?php
+            for($i = $pg+1; $i <= $pg+$links; $i++){
+              if($i>$paginas){}
+              else{
+            ?>
+                
+            <a href="noticias.php?pg=<?php echo $i;?>" class="ativo<?php echo $i;?>"><?php echo $i;?></a>		
+              
+            <?php
+              }
+            }
+            ?>
+
+            <a href="noticias.php?pg=<?php echo $paginas;?>">Última página</a>		
+
+            </div><!-- paginas -->
+            <?php
+              }
+            ?>
+            <!-- fim botoes paginacao -->            
+
+
+            </div>
+            </div>
+            </div>
     <!-- END BLOG ENTRIES -->
     </div>
 

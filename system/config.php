@@ -6,4 +6,4 @@
 	define ( 'DB_PASSWORD', '' );
 	define ( 'DB_DATABASE', 'iapneu77_bd_iap' );
 	define ( 'DB_CHARSET', 'utf8' );
-	define ( 'DB_PREFIX', 'va' );
+	define ( 'DB_PREFIX', '' );

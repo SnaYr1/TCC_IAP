@@ -131,7 +131,7 @@
     <div class="w3-top">
       <!-- Navbar em telas pequenas(mobile) -->
       <div id="demo1" class="w3-sidebar w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-bar-block w3-white w3-animate-left">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-center"onclick="myFunction('close')"><i class="fa fa-close"></i> Close</a> 
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-center"onclick="myFunction('demo1')"><i class="fa fa-close"></i> Close</a> 
         <br>   
         <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-center" onclick="myFunction()">Inicio</a>
         <br> 
@@ -275,24 +275,26 @@
                 while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){
             ?>        
                     <li>            	
-                          <span class="thumb">
+                          <span class="thumb ">
                             <div class="w3-center">
-                              <img class="w3-image" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="1000" height="800">
+                              <img class="w3-image w3-center" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="600" height="500">
                             </div>
+                            <br>
                           </span> 
                             
-                          <span class="content">
+                          <span class="content" style="width:100%;">
                             <h1><?php echo $exibe->titulo;?></h1>
-                              <p><?php echo limitarTexto($exibe->descricao, $limite=450)?></p> 
+                              <p><?php echo limitarTexto($exibe->descricao, $limite=400)?></p> 
                               <div class="footer_post">
-                                <a href="post.php?id=<?php echo $exibe->id;?>">Leia o artigo completo</a>
-                                <span class="datapost">Data de Publicação: <strong><?php echo $exibe->data;?></strong></span>  
-                              </div><!-- footer post -->  
-                              <hr> 
                               <br>
-                          </span>     
+                                <a href="post.php?id=<?php echo $exibe->id;?>"><strong>Leia o artigo completo</strong></a>
+                                <span class="datapost">Data de Publicação: <strong><?php echo $exibe->data;?></strong></span>  
+
+                          </span>
+                          <br>   
+                          <hr>  
                       </li> 
-                    
+
                     
               <?php
               }//while
@@ -422,7 +424,7 @@
           </div>
           <div class="w3-margin w3-white">
               <div class="w3-left" style="list-style:none;">
-                <h5>
+                
               <?php
 
 
@@ -435,13 +437,13 @@
       
       if($contar > 0 ){
         while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){?>
-                  
-                  <a class="w3-left" href="exibe.php?id=<?php echo $exibe->id; ?>" title="<?php echo  $exibe->titulo ?>">
+                  <h5>
+                  <a class="w3-left" href="post.php?id=<?php echo $exibe->id; ?>" title="<?php echo  $exibe->titulo ?>">
                           <?php echo   $exibe->titulo . "<br>"; ?>
-                          
                   </a>
+                  </h5>
                   <br>
-                  </h5> <?php
+                   <?php
 
               }//while
     }else{
@@ -588,14 +590,6 @@ function myFunction(id) {
   }
 }
 
-
-function openside() {
-  document.getElementById("mySidebar").style.display = "block";
-}
-
-function closeside() {
-  document.getElementById("mySidebar").style.display = "none";
-}
 
 </script>
 

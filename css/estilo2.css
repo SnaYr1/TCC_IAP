@@ -50,7 +50,6 @@ body{background:url(../imagens/bg-body.jpg);}
 .content p, .boxposts li{
 	font-family:tahoma, "Trebuchet Ms", arial;
 	font-size:13px;
-	color:#999;
 	line-height:20px;
 }
 
@@ -66,7 +65,6 @@ body{background:url(../imagens/bg-body.jpg);}
 .footer_post a{
 	font-family:tahoma, "Trebuchet Ms", arial;
 	font-size:13px;
-	color:#666;
 	line-height:20px;
 	font-weight:bold;
 	text-decoration:none;

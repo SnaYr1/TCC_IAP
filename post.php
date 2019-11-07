@@ -1,7 +1,5 @@
 	<?php 
 	date_default_timezone_set('America/Sao_Paulo');
-	require_once 'system/config.php';
-	require_once 'system/database.php';
 	include 'conexao.php';
 	require_once ("admin/conexao/conecta.php");
 	require ("admin/functions/limita-texto.php");
@@ -171,12 +169,18 @@
 		</div>
 	</div>
 	
-		<div class="w3-padding-large ">
+      <!-- Grid -->
+      <div class="w3-row w3-padding w3-display-container">
+        <!-- Blog entries -->
+        <div class="w3-col l8 s12 ">  
+          <!-- Blog entry -->
+          <div class=" w3-content">
+		  <div class="w3-padding-large" style="width:100%">
 			
 			
 			<ul class="" id="pgPost">
-				
-	<?php
+	       
+<?php
 	if(isset($_GET['id'])){
 		$idUrl = $_GET['id'];
 	}
@@ -189,21 +193,21 @@
 		
 		if($contar > 0 ){
 			while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){
-	?>        
-					<li class=" w3-col l8 s12">            	
-								<span class="thumb w3-center">
-									<img class="w3-image" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="800" height="600">
-								</span>                
-								<span class="content">
-									<h1><?php echo $exibe->titulo;?></h1>
-										<p><?php echo ($exibe->descricao)?></p> 
-										<div class="footer_post">
-											<a href="javascript:history.back()">Voltar para página anterior</a>
-												<span class="datapost">Data de Publicação: <strong><?php echo $exibe->data;?></strong></span>                        
-										</div><!-- footer post -->                    
-								</span>                
-						</li>  
-	<?php
+?>        
+        	<li>            	
+                <span class="thumb">
+                	<img src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" style="max-width:600px;" height="166">
+                </span>                
+                <span class="content">
+                	<h1><?php echo $exibe->titulo;?></h1>
+                    <p><?php echo ($exibe->descricao)?></p> 
+                    <div class="footer_post">
+                    	<a href="javascript:history.back()">Voltar para página anterior</a>
+                        <span class="datapost">Data de Publicação: <strong><?php echo $exibe->data;?></strong></span>                        
+                    </div><!-- footer post -->                    
+                </span>                
+            </li>  
+<?php
 	}//while
 	}else{
 		echo '<li>Não existe post cadastrados no sistema</li>';
@@ -228,21 +232,104 @@
 					
 									
 				</ul>
-				
+            <!-- FIM DA GRID -->
+      </div>
 
 
-				
-		
-		</div><!-- div center -->
+        <!-- FIM About/Intro Menu -->
+        </div>
 
 
 
-		
+    <!-- END w3-content -->
+    </div>
 
-		</div>
-				
-			<!-- END BLOG ENTRIES -->
-			</div>
+
+
+
+      
+
+        <!-- About/Information menu -->
+        <div class="w3-col l4">
+          <!-- About Card -->
+          <div class="w3-white">
+            
+
+
+            <div class="w3-center w3-padding w3-cyan">
+              <h4>Ultimas Notícias</h4>
+
+          </div>
+          <div class="w3-margin w3-white">
+              <div class="w3-left" style="list-style:none;">
+                
+              <?php
+
+		$quantidade = 3;
+            
+                  
+    $sql = "SELECT * from tb_postagens WHERE exibir='Sim' ORDER BY id DESC LIMIT $quantidade";
+    try{
+      $resultado = $conexao->prepare($sql);
+      $resultado->execute();
+      $contar = $resultado->rowCount();
+      
+      if($contar > 0 ){
+        while($exibe = $resultado->fetch(PDO::FETCH_OBJ)){?>
+                  <h5>
+                  <a class="w3-left" href="post.php?id=<?php echo $exibe->id; ?>" title="<?php echo  $exibe->titulo ?>">
+                          <?php echo   $exibe->titulo . "<br>"; ?>
+                          
+                  </a>
+				  </h5>
+                  <br>
+                   <?php
+
+              }//while
+    }else{
+      echo '<li>Não existe post cadastrados no sistema</li>';
+    }
+          
+    }catch(PDOException $erro){ echo $erro;}
+                  ?>
+              </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+            
+          <hr>
+        <!-- Subscribe -->
+        <div class="w3-white w3-center">
+            <div class=" w3-padding w3-cyan">
+              <h4>Inscreva-se</h4>
+            </div>
+            <div class=" w3-white">
+              <p ><h5 class="w3-left"> Digite seu e-mail para receber as ultimas noticias.</h5></p>
+              <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+              <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-deep-orange">Subscribe</button></p>
+            </div>
+          </div>
+
+                  <!-- cruzeiro do sul -->
+        <div class="w3-white w3-center">
+            <div class=" w3-padding w3-cyan">
+              <h4>Conheça a Cruzeiro do Sul</h4>
+            </div>
+            <div class=" w3-white ">
+              <p > <h5 class="">Na <b> <a href="https://www.cruzeirodosulvirtual.com.br/">Cruzeiro do Sul Virtual</a></b> você encontra o caminho para ir mais longe. Conheça nossos cursos e alcance o seu sucesso profissional:</h5></p>
+              <a href="https://www.cruzeirodosulvirtual.com.br/"> <img src="cruzeirosul/cruzeirosul2.png"/></a>
+            </div>
+          </div>
+      
+      </div><!-- div center -->
+
+      </div>
+          
+        <!-- END BLOG ENTRIES -->
+        </div>
+
 
 			<style>
 				footer {
