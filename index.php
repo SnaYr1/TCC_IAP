@@ -169,6 +169,73 @@
 		</div>
 	</div>
 	
+	  <!-- Carousel Slide -->
+	  <div id="demo" class="carousel slide" data-ride="carousel">
+    <header class="w3-display-container w3-wide">
+    
+        <!--Indicadores-->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1" ></li>
+            <li data-target="#demo" data-slide-to="2" ></li>
+            <li data-target="#demo" data-slide-to="3" ></li>
+            <li data-target="#demo" data-slide-to="4" ></li>
+            <li data-target="#demo" data-slide-to="5" ></li>
+            <li data-target="#demo" data-slide-to="6" ></li>
+            <li data-target="#demo" data-slide-to="7" ></li>
+
+
+        </ul>
+
+        <!--Slide Show-->
+        <div class="carousel-inner w3-center">
+          <div class="carousel-item active">
+            <img class="w3-image " src="slidebar/image-52.jpg" alt="Instituto Aprender" width="1200" height="800">
+          </div>
+
+          <div class="carousel-item ">
+            <img class="w3-image" src="slidebar/image-2.jpg" alt="Instituto Aprender" width="1200" height="600">
+          </div>
+
+          <div class="carousel-item ">
+            <img class="w3-image" src="slidebar/image-4.jpg" alt="Instituto Aprender" width="1200" height="600">
+          </div>
+
+          <div class="carousel-item ">
+            <img class="w3-image" src="slidebar/image.jpg" alt="Instituto Aprender" width="1200" height="600">
+          </div>
+
+          <div class="carousel-item ">
+            <img class="w3-image" src="slidebar/image-59.jpg" alt="Instituto Aprender" width="1200" height="600">
+          </div>
+
+          <div class="carousel-item ">
+            <img class="w3-image" src="slidebar/image-130.jpg" alt="Instituto Aprender" width="1200" height="600">
+          </div>
+
+          <div class="carousel-item ">
+            <img class="w3-image" src="slidebar/image-129.jpg" alt="Instituto Aprender" width="1200" height="600">
+          </div>
+
+          <div class="carousel-item ">
+            <img class="w3-image" src="slidebar/image-5.jpg" alt="Instituto Aprender" width="1200" height="600">
+          </div>
+
+        </div>
+
+        <!-- Controles direito e esquerdo-->
+        <a class="carousel-control-prev control-carousel-arrows" href="#demo" data-slide="prev">
+          <span class=""><i class="fas fa-caret-left control-carousel-arrows"></i></span>
+        </a>
+
+        <a class="carousel-control-next control-carousel-arrows" href="#demo" data-slide="next">
+          <span class="fas fa-caret-right control-carousel-arrows"></span>
+        </a>
+    </header>
+  </div>
+    
+<hr>
+
       <!-- Grid -->
       <div class="w3-row w3-padding w3-display-container">
         <!-- Blog entries -->

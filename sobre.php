@@ -180,19 +180,12 @@ body {font-family: "Open Sans"}
   <h1>Sobre a empresa</h1>
 
 </div>
-<img src="equipe/iap.jpg" class="objectImage2"/>
+<div class="w3-center">
+<img src="equipe/iap.jpg" class="w3-image w3-center" width="1200" height="800"/>
+</div>
         <div class="col-md-10 col-xs-10 w3-center container w3-padding">
-
-            <h5>O Instituto Aprender fundado em 2010, oferece oficinas, mini-cursos e cursos para professores e
-                 encontros temáticos de orientação para pais. Além do ponto forte de 
-                 atendimento à dificuldades de aprendizagens escolares e transtornos globais 
-                 do desenvolvimento, para pessoas de todas as faixas etárias portadoras de 
-                 transtornos cognitivos e outras doenças neuropsicomotoras e sensoriais. 
-                 A empresa foi fundado em 2010, oferencendo Oficinas, Palestras, Mini-cursos 
-                 e Cursos (Extensão e Pós-Graduação), para que a pessoa melhores mais ainda
-                suas habilidades e elimene suas dificuldades em raciocinar.
-                O instituto oferece também profissionais no ramo da neurociencia, psicologas,
-                psciciatras, e neuropsicopadagogas.</h5>
+  <hr>
+            <h5>O Instituto Aprender (IAP), fundado em 2010, formada por neuropsicopedagogos, psicólogos e massoterapeutas, visa o atendimento das dificuldades de aprendizagem, inclusão de crianças, jovens, adultos e idosos portadores de transtornos cognitivos, deficiências neuropsicomotoras e sensoriais, desenvolvendo a qualidade de vida, a acessibilidade e a cidadania..</h5>
                 
         </div>
         <br>
@@ -228,12 +221,12 @@ body {font-family: "Open Sans"}
                       <br>
      
                       <div class="col-md-4 col-xs-4 w3-center">
-                      <img class="w3-circle objectImage" src="equipe/franciele.jpg"/>
+                      <img class="w3-circle objectImage" src="equipe/userfemale.png"/>
                         <li><h5>Franciele - PSICOLOGA</h5></li>
                       </div>
                       <br>
                       <div class="col-md-4 col-xs-4 w3-center">
-                      <img class="w3-circle objectImage" src="equipe/alessandro.jpg"/>
+                      <img class="w3-circle objectImage" src="equipe/usermale.png"/>
                         <li><h5>Alessandro - FACILITADOR DE BARRAS DE ACCESS REIKI</h5></li>
                       </div>
                       <br>
