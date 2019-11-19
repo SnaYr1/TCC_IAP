@@ -248,12 +248,6 @@ body {font-family: "Open Sans"}
             <div class="carousel-item active">
               <img src="upload/galeria/<?php echo $exibe->imagem?>" alt="<?php echo $exibe->titulo;?>" style="width:100%;">
             </div>
-            <div class="carousel-item">
-              <img src="upload/galeria/<?php echo $exibe->imagem?>" alt="<?php echo $exibe->titulo;?>" style="width:100%;">
-            </div>
-            <div class="carousel-item ">
-              <img src="upload/galeria/<?php echo $exibe->imagem?>" alt="<?php echo $exibe->titulo;?>" style="width:100%;">
-            </div>
           </div>
 
           <!-- Left and right controls -->

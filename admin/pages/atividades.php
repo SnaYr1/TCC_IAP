@@ -84,14 +84,80 @@ try{
 	      		<div class="widget widget-table action-table">
             <div class="widget-header"> <i class="icon-th-list"></i>
               <h3>Usuário - <?php echo $mostra->nome;?></h3>
-            </div>
+				  <span class="w3-right w3-padding"><a type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Indicar Jogo<i class="icon-puzzle-piece"></i> </a></span>
+				  
+				  <!-- The Modal -->
+<div class="modal hide" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+	<div class="modal-header w3-center">
+		<h1>Lista de jogos</h1>
+	</div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+
+	              <!-- /widget-header -->
+				  <div class="widget-content">
+              <table class="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th> Nº</th>
+                    <th> Nome do jogo</th>
+                    <th> Descrição</th>
+                    <th> Categoria</th>
+                    <th> Link</th>
+                    <th class="td-actions"> </th>
+                  </tr>
+                </thead>
+                <tbody>
+					<?php
+
+
+	$select = "SELECT * FROM atividades ORDER BY id";
+
+		
+		try{
+			$result = $conexao->prepare($select);			
+			$result->execute();
+			$contar = $result->rowCount();
+			if($contar>0){
+				while($mostra = $result->FETCH(PDO::FETCH_OBJ)){
+?>     
+                  <tr>
+                    <td> <?php echo $mostra->titulo;?> </td>
+                    <td> <?php echo $mostra->descricao;?> </td>
+                    <td> <?php echo $mostra->categoria;?> </td>
+                    <td> <?php echo $mostra->link;?> </td>
+					<td class="td-actions"><a href="home.php?acao=atividades&id=<?php echo $mostra->id;?>" class="btn btn-small btn-info"><i class="btn-icon-only icon-gamepad"> </i></a>
+                    <a href="home.php?acao=atividades&pg=&delete=<?php echo $mostra->id;?>" class="btn btn-danger btn-small"  onClick="return confirm('Deseja realmente exluir o jogo?')"><i class="btn-icon-only icon-remove"> </i></a></td>
+                  </tr>
+<?php
+}				
+		
+}
+		}catch(PDOException $e){
+			echo $e;
+		}
+?>                  
+				</tbody>
+              </table>  
+            </div> 
+      </div>
+    </div>
+  </div>
+</div>
+			</div>
             <?php
 }				
 
 		}catch(PDOException $e){
 			echo $e;
 		}
-?>                  
+?>
+
+
+
             <!-- /widget-header -->
             <div class="widget-content">
               <table class="table table-striped table-bordered">

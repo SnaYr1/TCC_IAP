@@ -196,7 +196,7 @@
 ?>        
         	<li>            	
                 <span class="thumb w3-center">
-                	<img src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="600" height="600">
+                	<img class="w3-image" src="upload/postagens/<?php echo $exibe->imagem;?>" alt="<?php echo $exibe->titulo;?>" title="<?php echo $exibe->titulo;?>" width="600" height="600">
                 </span>                
                 <span class="content">
                 	<h1><?php echo $exibe->titulo;?></h1>

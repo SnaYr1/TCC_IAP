@@ -179,7 +179,7 @@ body {font-family: "Open Sans"}
 
 <div class="container">
         <div class="row">
-            <div class="col-xl-6 offset-xl-2 py-8">
+            <div class="col-8 ">
                 <!--ao clicar em enviar mensagem o usuario sera redirecionado para esta pagina-->
                 <form id="contact-form" method="post" action="admin/enviaemail/envia.php" role="form">
                     <div class="messages"></div>
